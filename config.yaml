@@ -22,6 +22,7 @@ load_model: None
 # - EGNN: V. G. Satorras et al., https://arxiv.org/abs/2102.09844 
 # - TorchMD-Net: P. Thölke et al., https://arxiv.org/abs/2202.02541
 # The defualt settings are listed below.
+
 model: 
   # name: "SchNet"
   # num_atoms: 28
@@ -84,13 +85,13 @@ model:
 # - MD22: S. Chmiela et al., https://www.science.org/doi/10.1126/sciadv.adf0873
 # - SPICE: P. Eastman et al., https://www.nature.com/articles/s41597-022-01882-6
 dataset:
-  batch_size: 256
+  batch_size: 64
   num_workers: 8
   valid_size: 0.1
   test_size: 0.1
   data_dir: './ANI-1'
   # data_dir: './ANI-1x'
-  # data_dir: './ISO17'
+  # data_dir: './iso17'
   # data_dir: './MD22/md22_Ac-Ala3-NHMe.xyz'
   # data_dir: './MD22/md22_DHA.xyz'
   # data_dir: './MD22/md22_stachyose.xyz'

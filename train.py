@@ -228,8 +228,7 @@ class Trainer(object):
 
     def _load_weights(self, model):
         try:
-            checkpoints_folder = os.path.join(self.config['load_model'], 'checkpoints')
-            state_dict = torch.load(os.path.join(checkpoints_folder, 'model.pth'), map_location=self.device)
+            state_dict = torch.load(os.path.join(self.config['load_model'], 'model.pth'), map_location=self.device)
             model.load_state_dict(state_dict)
             print("Loaded pre-trained model with success.")
         except FileNotFoundError:
