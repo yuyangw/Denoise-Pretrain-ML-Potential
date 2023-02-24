@@ -1,0 +1,36 @@
+gpu: 'cuda:0'
+lr: 2e-4
+min_lr: 1e-7
+weight_decay: 0.0
+epochs: 5
+warmup_epochs: 0.7
+patience_epochs: 0.3
+load_model: None
+log_every_n_steps: 50
+
+model: 
+  name: "TorchMD-Net"
+  hidden_channels: 256
+  num_layers: 6
+  num_rbf: 32
+  rbf_type: "expnorm"
+  trainable_rbf: True
+  activation: "silu"
+  attn_activation: "silu"
+  neighbor_embedding: True
+  num_heads: 8
+  distance_influence: "both"
+  cutoff_lower: 0.0
+  cutoff_upper: 5.0
+  max_atom_type: 28
+  max_chirality_type: 5
+  max_num_neighbors: 32
+
+dataset:
+  batch_size: 256
+  num_workers: 8
+  valid_size: 0.05
+  ani1: True
+  ani1x: True
+  std: 0.2
+  seed: 777

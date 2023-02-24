@@ -1,0 +1,31 @@
+gpu: 'cuda:0'
+lr: 2e-4
+min_lr: 1e-7
+weight_decay: 0.0
+epochs: 5
+warmup_epochs: 0.7
+patience_epochs: 0.3
+load_model: None
+log_every_n_steps: 50
+
+model: 
+  name: "SchNet"
+  num_atoms: 28
+  bond_feat_dim: 1
+  num_targets: 1
+  hidden_channels: 256
+  num_filters: 256
+  num_interactions: 5
+  num_gaussians: 32
+  cutoff: 5.0
+  max_num_neighbors: 32
+  readout: 'add'
+
+dataset:
+  batch_size: 256
+  num_workers: 8
+  valid_size: 0.05
+  ani1: True
+  ani1x: True
+  std: 0.2
+  seed: 777
