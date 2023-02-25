@@ -26,16 +26,15 @@ Set up a conda environment and clone the github repo
 
 ```
 # create a new environment
-$ conda create --name mlip python=3.9
-$ conda activate mlip
+$ conda create --name ml_potential python=3.8
+$ conda activate ml_potential
 
 # install requirements
-$ conda install pytorch pytorch-cuda=11.6 -c pytorch -c nvidia
-$ conda install pyg -c pyg
-$ conda install -c dglteam/label/cu116 dgl
-$ conda install -c conda-forge tensorboard
-$ pip install PyYAML
-$ pip install rdkit
+$ conda install pytorch==1.10.2 cudatoolkit=11.3 -c pytorch -c conda-forge
+$ conda install -c conda-forge pytorch_geometric==2.0.3
+$ conda install -c dglteam/label/cu113 dgl
+$ conda install -c conda-forge tensorboard openmm
+$ pip install PyYAML rdkit
 $ pip install git+https://github.com/AMLab-Amsterdam/lie_learn
 
 # clone the source code

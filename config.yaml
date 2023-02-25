@@ -85,7 +85,7 @@ model:
 # - MD22: S. Chmiela et al., https://www.science.org/doi/10.1126/sciadv.adf0873
 # - SPICE: P. Eastman et al., https://www.nature.com/articles/s41597-022-01882-6
 dataset:
-  batch_size: 64
+  batch_size: 256
   num_workers: 8
   valid_size: 0.1
   test_size: 0.1
