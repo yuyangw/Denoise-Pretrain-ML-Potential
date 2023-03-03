@@ -1,16 +1,12 @@
 # Denoise Pre-training for ML Potentials
 
-<strong>Denoise Pretraining on Non-equilibrium Molecular Conformations for Accurate and Transferable Neural Potentials</strong> </br>
-<!-- [[arXiv]]() | [[PDF]]() </br> -->
+<strong>Denoise Pre-training on Non-equilibrium Molecules for Accurate and Transferable Neural Potentials</strong> </br>
 [Yuyang Wang](https://yuyangw.github.io/), [Changwen Xu](https://changwenxu98.github.io/), [Zijie Li](https://scholar.google.com/citations?user=ji7TXTMAAAAJ&hl=en&oi=ao), [Amir Barati Farimani](https://www.meche.engineering.cmu.edu/directory/bios/barati-farimani-amir.html) </br>
 Carnegie Mellon University </br>
 
 <img src="figs/framework.png" width="460">
 
-This is the official implementation of "Denoise Pretraining on Non-equilibrium Molecular Conformations for Accurate and Transferable Neural Potentials". In this work, we propose denoise pretraining on non-equilibrium molecular conformations to achieve more accurate and transferable potential predictions with invariant and equivariant graph neural networks (GNNs). Our models pre-trained on small molecules demonstrate superior accuracy and transferability, which improves performance when fine-tuned on diverse molecular systems which include different elements, biomolecules, and larger systems. 
-<!-- If you find our work useful in your research, please cite:
-```
-``` -->
+This is the official implementation of "Denoise Pre-training on Non-equilibrium Molecules for Accurate and Transferable Neural Potentials". In this work, we propose denoise pretraining on non-equilibrium molecular conformations to achieve more accurate and transferable potential predictions with invariant and equivariant graph neural networks (GNNs). Our models pre-trained on small molecules demonstrate superior accuracy and transferability, which improves performance when fine-tuned on diverse molecular systems which include different elements, biomolecules, and larger systems. 
 
 ## Getting Started
 
@@ -30,11 +26,11 @@ $ conda create --name ml_potential python=3.8
 $ conda activate ml_potential
 
 # install requirements
-$ conda install pytorch==1.10.2 cudatoolkit=11.3 -c pytorch -c conda-forge
-$ conda install -c conda-forge pytorch_geometric==2.0.3
-$ conda install -c dglteam/label/cu113 dgl
+$ conda install pytorch==1.12.0 cudatoolkit=11.6 -c pytorch -c conda-forge
+$ conda install pyg -c pyg
+$ conda install -c dglteam/label/cu116 dgl
 $ conda install -c conda-forge tensorboard openmm
-$ pip install PyYAML rdkit
+$ pip install PyYAML rdkit ase
 $ pip install git+https://github.com/AMLab-Amsterdam/lie_learn
 
 # clone the source code
@@ -80,6 +76,7 @@ We also provide pre-trained checkpoint `model.pth` and the configuration `config
 
 ## Acknowledgement
 
+The implementation of GNNs in this work is based on:
 - Implementation of SchNet: [kyonofx/MDsim](https://github.com/kyonofx/MDsim/blob/main/mdsim/models/schnet.py) \& [PyG](https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.nn.models.SchNet.html)
 - Implementation of SE(3)-Transformer: [FabianFuchsML/se3-transformer-public](https://github.com/FabianFuchsML/se3-transformer-public)
 - Implementation of EGNN: [vgsatorras/egnn](https://github.com/vgsatorras/egnn)

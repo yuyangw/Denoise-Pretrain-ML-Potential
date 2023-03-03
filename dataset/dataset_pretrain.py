@@ -39,7 +39,6 @@ class PretrainData(Dataset):
         x = torch.tensor(atoms, dtype=torch.long)
         pos = torch.tensor(pos, dtype=torch.float)
         noise = torch.tensor(noise, dtype=torch.float)
-        m_ = torch.tensor(m_, dtype=torch.bool)
         
         data = Data(x=x, pos=pos, noise=noise)
         return data

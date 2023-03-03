@@ -114,3 +114,13 @@ class SchNetWrap(SchNet):
     @property
     def num_params(self):
         return sum(p.numel() for p in self.parameters())
+
+    def load_state_dict(self, state_dict):
+        own_state = self.state_dict()
+        for name, param in state_dict.items():
+            if name not in own_state:
+                print(f"Skipping {name} as it is not in the model")
+                continue
+            if isinstance(param, nn.parameter.Parameter):
+                param = param.data
+            own_state[name].copy_(param)
