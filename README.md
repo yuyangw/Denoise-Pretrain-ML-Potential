@@ -1,12 +1,13 @@
 # Denoise Pre-training for ML Potentials
 
 <strong>Denoise Pre-training on Non-equilibrium Molecules for Accurate and Transferable Neural Potentials</strong> </br>
+[[arXiv]](https://arxiv.org/abs/2303.02216) [[PDF]](https://arxiv.org/pdf/2303.02216.pdf) </br>
 [Yuyang Wang](https://yuyangw.github.io/), [Changwen Xu](https://changwenxu98.github.io/), [Zijie Li](https://scholar.google.com/citations?user=ji7TXTMAAAAJ&hl=en&oi=ao), [Amir Barati Farimani](https://www.meche.engineering.cmu.edu/directory/bios/barati-farimani-amir.html) </br>
 Carnegie Mellon University </br>
 
 <img src="figs/framework.png" width="460">
 
-This is the official implementation of "Denoise Pre-training on Non-equilibrium Molecules for Accurate and Transferable Neural Potentials". In this work, we propose denoise pretraining on non-equilibrium molecular conformations to achieve more accurate and transferable potential predictions with invariant and equivariant graph neural networks (GNNs). Our models pre-trained on small molecules demonstrate superior accuracy and transferability, which improves performance when fine-tuned on diverse molecular systems which include different elements, biomolecules, and larger systems. 
+This is the official implementation of "[Denoise Pre-training on Non-equilibrium Molecules for Accurate and Transferable Neural Potentials](https://arxiv.org/abs/2303.02216)". In this work, we propose denoise pretraining on non-equilibrium molecular conformations to achieve more accurate and transferable potential predictions with invariant and equivariant graph neural networks (GNNs). Our models pre-trained on small molecules demonstrate superior accuracy and transferability, which improves performance when fine-tuned on diverse molecular systems which include different elements, biomolecules, and larger systems. 
 
 ## Getting Started
 
@@ -73,6 +74,18 @@ We also provide pre-trained checkpoint `model.pth` and the configuration `config
 - Pre-trained SE(3)-Transformer in `ckpt/se3transformer` folder
 - Pre-trained EGNN in `ckpt/egnn` folder
 - Pre-trained TorchMD-Net in `ckpt/torchmdnet` folder
+
+## Reference
+
+If you find our work useful in your research, please cite:
+```
+@article{wang2023denoise,
+  title={Denoise Pre-training on Non-equilibrium Molecules for Accurate and Transferable Neural Potentials},
+  author={Wang, Yuyang and Xu, Changwen and Li, Zijie and Barati Farimani, Amir},
+  journal={arXiv preprint arXiv:2303.02216},
+  year={2023}
+}
+```
 
 ## Acknowledgement
 
